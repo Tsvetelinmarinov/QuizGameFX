@@ -49,6 +49,10 @@ public class App extends Application {
     private Scene arg0 = new Scene(_root_,800,700);
 
 
+    /**
+     * Logo label
+     */
+    private final Label logo = new Label("Quiz of the day");
 
 
 
@@ -83,6 +87,52 @@ public class App extends Application {
      */
     private void build(){
 
+        //root
+        _root_.setStyle("-fx-background-color:rgb(255,255,255);");
+
+        //Logo label
+        logo.setFont(new Font("Times New Roman",21));
+        logo.setStyle("-fx-font-style:ITALIC;");
+        logo.setStyle("-fx-text-fill:rgb(100,100,100);");
+        logo.setLayoutX(350);
+        logo.setLayoutY(20);
+        _root_.getChildren().add(logo);
+
+
+        //Spacer
+        Separator sp01 = new Separator();
+        sp01.setPrefSize(340,0);
+        sp01.setLayoutX(0);
+        sp01.setLayoutY(33);
+        //sp01.setStyle("-fx-background-color:rgb(220,220,220);");
+        _root_.getChildren().add(sp01);
+
+
+        //Spacer
+        Separator sp02 = new Separator();
+        sp02.setPrefSize(350,0);
+        sp02.setLayoutX(495);
+        sp02.setLayoutY(33);
+        _root_.getChildren().add(sp02);
+
+
+        //Spacer
+        Separator sp03 = new Separator();
+        sp03.setPrefSize(800,0);
+        sp03.setLayoutX(0);
+        sp03.setLayoutY(85);
+        _root_.getChildren().add(sp03);
+
+
+        //Question mark
+        ImageView quest = new ImageView(new Image(
+        "C:\\Users\\Cvete\\IdeaProjects\\QuizApplication\\src\\main\\java\\appdata\\quest.png"));
+        quest.setFitWidth(25);
+        quest.setFitHeight(25);
+        quest.setLayoutX(20);
+        quest.setLayoutY(100);
+        _root_.getChildren().add(quest);
+        quest.setOnMouseClicked(command -> new _system_().show_tip());
 
 
         /**
@@ -94,6 +144,45 @@ public class App extends Application {
 
         //show the game on the screen
         arg1.show();
+
+    }
+
+
+
+
+
+     /**
+     * Logical class
+     * Holds all the program logics
+     */
+    private final class _system_ {
+
+
+        /**
+         * Question mark functionality
+         */
+        private void show_tip(){
+
+            //New stage
+            Stage stg = new Stage();
+
+            //New Anchor pane
+            AnchorPane _QUEST_ROOT_ = new AnchorPane();
+
+            //Scene
+            Scene scn = new Scene(_QUEST_ROOT_,300,100);
+
+
+            //set the window
+            stg.setTitle("About questions");
+            stg.setResizable(false);
+            stg.setScene(scn);
+
+            //show the hint
+            stg.show();
+
+        }
+
 
     }
 
