@@ -52,7 +52,7 @@ public class App extends Application {
     /**
      * Logo label
      */
-    private final Label logo = new Label("Quiz of the day");
+    private final Label logo = new Label("Въпроси на деня");
 
 
 
@@ -172,7 +172,7 @@ public class App extends Application {
             AnchorPane _QUEST_ROOT_ = new AnchorPane();
 
             //Scene
-            Scene scn = new Scene(_QUEST_ROOT_,300,100);
+            Scene scn = new Scene(_QUEST_ROOT_,470,100);
 
              //Notation
             ImageView notice = new ImageView(new Image(
@@ -186,7 +186,7 @@ public class App extends Application {
 
 
             //Label with information
-            Label arg00 = new Label("Every question have only one right answer, and brings 1 point!");
+            Label arg00 = new Label("Всеки въпрос носи една точка и има само един верен отговор!");
             arg00.setLayoutX(50);
             arg00.setLayoutY(40);
             arg00.setFont(new Font("System",14));
@@ -194,7 +194,7 @@ public class App extends Application {
 
 
             //set the window
-            stg.setTitle("About questions");
+            stg.setTitle("Относно въпросите");
             stg.setResizable(false);
             stg.setScene(scn);
 
