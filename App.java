@@ -141,6 +141,8 @@ public class App extends Application {
         arg1.setTitle("Quiz game");
         arg1.setResizable(false);
         arg1.setScene(arg0);
+        arg1.getIcons().add(new Image(
+        "C:\\Users\\Cvete\\IdeaProjects\\QuizApplication\\src\\main\\java\\appdata\\icon.png"));
 
         //show the game on the screen
         arg1.show();
@@ -171,6 +173,24 @@ public class App extends Application {
 
             //Scene
             Scene scn = new Scene(_QUEST_ROOT_,300,100);
+
+             //Notation
+            ImageView notice = new ImageView(new Image(
+              "C:\\Users\\Cvete\\IdeaProjects\\QuizApplication\\src\\main\\java\\appdata\\notation.png"
+            ));
+            notice.setFitWidth(25);
+            notice.setFitHeight(25);
+            notice.setLayoutX(15);
+            notice.setLayoutY(37);
+            _QUEST_ROOT_.getChildren().add(notice);
+
+
+            //Label with information
+            Label arg00 = new Label("Every question have only one right answer, and brings 1 point!");
+            arg00.setLayoutX(50);
+            arg00.setLayoutY(40);
+            arg00.setFont(new Font("System",14));
+            _QUEST_ROOT_.getChildren().add(arg00);
 
 
             //set the window
