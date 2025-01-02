@@ -1,0 +1,7 @@
+questnm
+scores
+quest_lbl
+first_opt
+sec_opt
+th_opt
+frt_opt
